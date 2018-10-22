@@ -2,7 +2,18 @@
     width: 100%;
     background-color: #ddd;
   }
-  
+  .myProgressC{
+    width: 100%;
+    background-color: #ddd;
+  }
+  .myBar1C {
+    width: 10%;
+    height: 30px;
+    background-color: #4CAF50;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+  }
   #myBar1 {
     width: 10%;
     height: 30px;
