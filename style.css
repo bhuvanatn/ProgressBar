@@ -1,46 +1,21 @@
-#myProgress {
-    width: 100%;
-    background-color: #ddd;
-  }
-  .myProgressC{
-    width: 100%;
-    background-color: #ddd;
-  }
-  .myBar1C {
-    width: 10%;
-    height: 30px;
-    background-color: #4CAF50;
-    text-align: center;
-    line-height: 30px;
-    color: white;
-  }
-  #myBar1 {
-    width: 10%;
-    height: 30px;
-    background-color: #4CAF50;
-    text-align: center;
-    line-height: 30px;
-    color: white;
-  }
-  #myBar2 {
-    width: 10%;
-    height: 30px;
-    background-color: #4CAF50;
-    text-align: center;
-    line-height: 30px;
-    color: white;
-  }
-  #myBar3 {
-    width: 10%;
-    height: 30px;
-    background-color: #4CAF50;
-    text-align: center;
-    line-height: 30px;
-    color: white;
-  }
-  .space{
-     margin-bottom: 20px;
-  }
-  .red-bar {
-    background-color:red !important;
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.myProgress {
+  background-color: #4caf50;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+.space {
+  margin-bottom: 20px;
+}
+.red-bar {
+  background-color: red !important;
+  line-height: 30px;
+  text-align: center;
+  color: white;
 }
