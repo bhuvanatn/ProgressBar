@@ -27,7 +27,7 @@ xmlhttpObject.addEventListener("load", function(e) {
     but.innerHTML = response.buttons[i];
     mainid.appendChild(but);
   }
-  //To create select with option init.(combo box)
+  //To create select with option
   var sel = document.createElement("select");
   for (i = 1; i <= response.bars.length; i++) {
     var opt = document.createElement("option");
@@ -39,9 +39,9 @@ xmlhttpObject.addEventListener("load", function(e) {
   document.activeElement.addEventListener("change", function() {
     if (document.activeElement.tagName == "SELECT") {
       for (j = 0; j < response.bars.length; j++) {
-        if (document.activeElement.value === "Progress " + (j+1)) {
+        if (document.activeElement.value === "Progress " + (j + 1)) {
           width = parseInt(response.bars[j]);
-          prgbarNumber = j ;
+          prgbarNumber = j;
         }
       }
     }
@@ -56,19 +56,23 @@ xmlhttpObject.addEventListener("load", function(e) {
 
   var myProgress = document.getElementsByClassName("myProgress");
   function newProgressbar(buttonValue) {
-    width = width + buttonValue;
-    myProgress[prgbarNumber].style.width = width + "%";
-    myProgress[prgbarNumber].innerHTML = width + "%";
+     width = width + buttonValue;
+     myProgress[prgbarNumber].style.width = width + "%";
+     myProgress[prgbarNumber].innerHTML = width + "%";
     if (width >= limit) {
-      console.log("my: ",myProgress[prgbarNumber], "prgbarNumber:", prgbarNumber);
+      console.log(
+        "my: ",
+        myProgress[prgbarNumber],
+        "prgbarNumber:",
+        prgbarNumber
+      );
       myProgress[prgbarNumber].style.width = limit + "%";
       myProgress[prgbarNumber].innerHTML = limit + "%";
-      myProgress[prgbarNumber].className = "red-bar space";
-    } else if (width <= 0) {
+      myProgress[prgbarNumber].className = "myProgress red-bar space";
+    } else if(width <= 0 ){
       width = 0;
       myProgress[prgbarNumber].style.width = width + "%";
       myProgress[prgbarNumber].innerHTML = width + "%";
     }
   }
-
 });
